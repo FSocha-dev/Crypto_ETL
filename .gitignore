@@ -1,5 +1,8 @@
 .DS_Store
-~
+~$*.docx
+*.docx
+~$*.doc
 *.tmp
 *.log
+.vscode/
 
