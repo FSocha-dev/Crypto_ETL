@@ -1,8 +1,20 @@
+# Airflow
+airflow/logs/
+airflow/plugins/__pycache__/
+airflow/plugins/*.pyc
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
 .DS_Store
+
+# Temporary files
 ~$*.docx
-*.docx
 ~$*.doc
 *.tmp
-*.log
-.vscode/
+
+# Word files
+*.docx
 
