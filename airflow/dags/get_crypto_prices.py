@@ -3,7 +3,7 @@ import requests
 
 def get_crypto_prices(
     ids: str = "bitcoin,ethereum,solana",
-    vs_currencies: str = "usd",
+    vs_currencies: str = "usd",  
 ) -> dict:
     url = "https://api.coingecko.com/api/v3/simple/price"
     params = {
