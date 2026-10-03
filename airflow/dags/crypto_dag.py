@@ -1,11 +1,12 @@
-from datetime import datetime
-from airflow import DAG
+from datetime import datetime, timezone
+
 from airflow.operators.python import PythonOperator
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
-
 from get_crypto_prices import get_crypto_prices
-from lib.ddl import CREATE_TABLES_SQL
 from lib.db import insert_prices_and_log_run
+from lib.ddl import CREATE_TABLES_SQL
+
+from airflow import DAG
 
 
 def load_prices_task(ti, **context):
@@ -22,7 +23,7 @@ def load_prices_task(ti, **context):
 
 with DAG(
     dag_id="crypto_price_etl",
-    start_date=datetime(2026, 1, 8),
+    start_date=datetime(2026, 1, 8, tzinfo=timezone.utc),
     schedule="@hourly",
     catchup=False,
     tags=["crypto"],

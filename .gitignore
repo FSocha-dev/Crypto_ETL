@@ -18,3 +18,11 @@ __pycache__/
 # Word files
 *.docx
 
+# Virtual environment
+.venv/
+
+# Local developer documentation
+RUFF_VENV_COMMANDS.md
+
+# Ruff cache
+.ruff_cache/

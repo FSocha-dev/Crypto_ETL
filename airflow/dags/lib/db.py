@@ -1,4 +1,5 @@
 from datetime import datetime, timezone
+
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 
 

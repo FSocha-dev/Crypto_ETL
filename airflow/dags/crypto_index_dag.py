@@ -1,11 +1,6 @@
-from datetime import datetime, timezone
-from airflow import DAG
-from airflow.operators.python import PythonOperator
-from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator      
-from airflow.providers.postgres.hooks.postgres import PostgresHook
-from airflow.sensors.external_task import ExternalTaskSensor
+'''from datetime import datetime, timezone
 
-from lib.ddl_index import CREATE_INDEX_TABLES_SQL
+from airflow.providers.postgres.hooks.postgres import PostgresHook
 
 INDEX_ID = "CMI3_CAP" #Crypto Market Index 3 Market Cap
 COINS = ["bitcoin", "ethereum", "binancecoin"]
@@ -41,4 +36,4 @@ def compute_index_value(ti, **context) -> float:
     finally:
         cur.close()
         conn.close()
-        
+'''
