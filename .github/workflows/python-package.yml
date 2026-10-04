@@ -27,8 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest pytest-cov ruff black
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        python -m pip install pytest pytest-cov ruff black requests
     - name: Lint (ruff)
       run: ruff check .
 
@@ -36,4 +35,4 @@ jobs:
       run: black --check .
 
     - name: Tests (pytest + coverage)
-      run: pytest -q --maxfail=1 --disable-warnings --cov=. --cov-report=term-missing
+      run: PYTHONPATH=airflow/dags python -m pytest -q --maxfail=1 --disable-warnings --cov=airflow/dags --cov-report=term-missing

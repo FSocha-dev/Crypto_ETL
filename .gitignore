@@ -26,3 +26,9 @@ RUFF_VENV_COMMANDS.md
 
 # Ruff cache
 .ruff_cache/
+
+# Pytest and coverage cache
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
