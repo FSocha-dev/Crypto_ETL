@@ -1,4 +1,4 @@
-CREATE_TABLES_SQL =  """
+CREATE_TABLES_SQL = """
 CREATE TABLE IF NOT EXISTS crypto_prices_raw (
   id            BIGSERIAL PRIMARY KEY,
   fetched_at    TIMESTAMPTZ NOT NULL,

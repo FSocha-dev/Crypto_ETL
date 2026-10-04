@@ -29,7 +29,7 @@ def insert_prices_and_log_run(
             values.get(mc_key),
             values.get(vol_key),
             values.get(change_key),
-            values.get(last_updated_key)
+            values.get(last_updated_key),
         )
         for coin_id, values in data.items()
         if currency in values

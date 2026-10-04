@@ -28,7 +28,7 @@ def compute_index_value(ti, **context) -> float:
         if len(mins) != len(COINS):
             missing = set(COINS) - set(min.keys())
             raise ValueError(f"Missing baseline data for coins: {missing}")
-        
+
         t0 = max(min.values())
 
         #dalsze rozwiniecie funkcji
